@@ -1,48 +1,117 @@
-#root {
-	max-width: 1280px;
-	margin: 0 auto;
-	padding: 2rem;
-	text-align: center;
-}
-
-.logo {
-	height: 6em;
-	padding: 1.5em;
-	will-change: filter;
-	transition: filter 300ms;
-}
-.logo:hover {
-	filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-	filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-	from {
-		transform: rotate(0deg);
-	}
-	to {
-		transform: rotate(360deg);
-	}
-}
-
-@media (prefers-reduced-motion: no-preference) {
-	a:nth-of-type(2) .logo {
-		animation: logo-spin infinite 20s linear;
-	}
-}
-
-.card {
-	padding: 2em;
-}
-
-.home-card {
+.app-container {
 	display: flex;
-	flex-direction: column;
-	gap: 0.5rem;
-}
-
-.read-the-docs {
-	color: #888;
-}
+	justify-content: center;
+	padding: 20px;
+  }
+  
+  .container {
+	width: 95%; /* Almost fill the screen with a small gap */
+	max-width: 1200px;
+	padding: 20px;
+	background-color: #fff;
+	box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Increase the shadow effect */
+	border-radius: 20px; /* More rounded edges */
+	margin: 10px; /* Small gap around the container */
+  }
+  
+  h1 {
+	text-align: center;
+  }
+  
+  .filters {
+	display: flex;
+	justify-content: space-around; /* Distribute space evenly */
+	flex-wrap: wrap;
+	gap: 20px; /* Maintain a consistent gap between items */
+	margin-bottom: 20px;
+	align-items: center;
+  }
+  
+  .filters .filter-item {
+	flex: 1;
+	max-width: 300px; /* Increase the size of input and select */
+	display: flex;
+	justify-content: center;
+  }
+  
+  .filters .highlight-container {
+	display: flex;
+	align-items: center;
+	flex: none;
+	max-width: none;
+	justify-content: center;
+  }
+  
+  .filters .highlight-container label {
+	margin-right: 10px; /* Adjust margin for closer alignment */
+	font-size: 18px;
+  }
+  
+  .filters .highlight-container input {
+	width: 24px; /* Adjust width for bigger checkbox */
+	height: 24px; /* Adjust height for bigger checkbox */
+  }
+  
+  input, select {
+	padding: 15px;
+	font-size: 18px;
+	width: 100%;
+	border-radius: 15px; /* Slightly more rounded edges for inputs and dropdown */
+	border: 1px solid #ccc;
+	text-align: center; /* Center align the input and select text */
+  }
+  
+  /* Increase the placeholder size */
+  input::placeholder, select::placeholder {
+	font-size: 18px;
+	text-align: center; /* Center align the placeholder text */
+  }
+  
+  table {
+	width: 100%;
+	border-collapse: collapse;
+	margin-top: 20px;
+	border-radius: 15px; /* More rounded edges for the table */
+	overflow: hidden; /* Ensures rounded corners are visible */
+	text-align: center; /* Center align the table content */
+  }
+  
+  th, td {
+	border: 1px solid #ddd;
+	padding: 12px; /* Adjust padding for a better look */
+	text-align: center; /* Center align table headers and data */
+  }
+  
+  th {
+	background-color: #f2f2f2;
+  }
+  
+  tr:nth-child(even) {
+	background-color: #f9f9f9;
+  }
+  
+  tr:hover {
+	background-color: #d1e7fd;
+  }
+  
+  /* Highlighted row */
+  .highlighted {
+	background-color: #b2dfee !important;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 600px) {
+	.filters {
+	  flex-direction: column;
+	  align-items: center;
+	}
+  
+	.filters .filter-item {
+	  max-width: 100%;
+	}
+  
+	.filters .highlight-container {
+	  justify-content: center;
+	}
+  }
+  
